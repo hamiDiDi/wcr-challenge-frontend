@@ -1,0 +1,77 @@
+<mat-card class="sign-up-form">
+  <div class="form-container">
+    <spline-viewer
+      url="https://prod.spline.design/NM-GvSU5vyySANZ5/scene.splinecode"
+    >
+    </spline-viewer>
+    <p class="form-subtitle">Create your account</p>
+
+    <form class="form-body" (ngSubmit)="onRegister()">
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label>Full Name</mat-label>
+        <input matInput [(ngModel)]="name" name="name" type="text" required />
+      </mat-form-field>
+
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          [(ngModel)]="email"
+          name="email"
+          type="email"
+          required
+        />
+      </mat-form-field>
+
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          [(ngModel)]="password"
+          name="password"
+          type="password"
+          required
+        />
+      </mat-form-field>
+
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label>Confirm Password</mat-label>
+        <input
+          matInput
+          [(ngModel)]="repassword"
+          name="repassword"
+          type="password"
+          required
+        />
+      </mat-form-field>
+      <button
+        mat-raised-button
+        color="primary"
+        class="submit-btn"
+        type="submit"
+      >
+        Sign Up
+      </button>
+      <p *ngIf="message" style="color: green">{{ message }}</p>
+      <p *ngIf="error" style="color: red">{{ error }}</p>
+    </form>
+
+    <div class="divider">
+      <span>OR</span>
+    </div>
+
+    <div class="sso-buttons">
+      <button mat-button class="google-btn">
+        <mat-icon>google</mat-icon> Sign up with Google
+      </button>
+
+      <button mat-button class="facebook-btn">
+        <mat-icon>facebook</mat-icon> Sign up with Facebook
+      </button>
+    </div>
+
+    <p class="footer-text">
+      Already have an account? <a routerLink="/login">Log In</a>
+    </p>
+  </div>
+</mat-card>

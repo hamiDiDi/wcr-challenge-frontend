@@ -1,0 +1,24 @@
+# Ignore node_modules (they will be installed inside the Docker container)
+node_modules/
+
+# Ignore dist build output (we copy the build output after running 'ng build')
+dist/
+
+# Ignore Git folder
+.git/
+
+# Ignore IDE files (VSCode, IntelliJ, etc.)
+.vscode/
+.idea/
+
+# Ignore log files
+*.log
+
+# Ignore Dockerfile (optional, only if you don't want it in the Docker image)
+Dockerfile
+
+# Ignore gitignore file (not needed in the Docker image)
+.gitignore
+
+# Ignore environment files (for local dev environments)
+.env

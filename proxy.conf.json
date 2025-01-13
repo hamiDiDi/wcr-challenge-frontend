@@ -1,0 +1,7 @@
+{
+    "/auth": {
+      "target": "https://wecanrace.it",
+      "secure": false
+    }
+  }
+  
